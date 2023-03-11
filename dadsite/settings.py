@@ -69,7 +69,7 @@ else:
             'NAME': 'db',
             'USER': os.getenv("DB_USERNAME"),
             'PASSWORD': os.getenv("DB_PASSWORD"),
-            'HOST': 'app-2f171977-fff2-4b02-95f5-73ceba35fddb-do-user-13471408-0.b.db.ondigitalocean.com',
+            'HOST': 'app-a873f790-b7d7-45fb-92c1-22176a025e02-do-user-13471408-0.b.db.ondigitalocean.com',
             'PORT': '25060',
         }
     }
