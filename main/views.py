@@ -8,7 +8,7 @@ from django.views.generic.base import View, TemplateView
 
 # Create your views here.
 class Home(TemplateView):
-    template_name='index.html'
+    template_name='home.html'
 
 def register_request(request):
 	if request.method == "POST":
