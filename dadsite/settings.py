@@ -14,7 +14,7 @@ DEVELOPMENT_MODE = os.getenv("DEVELOPMENT_MODE", "False") == "True"
 
 INSTALLED_APPS = [
     'main',
-    'crispy_forms',
+    "crispy_forms",
     'crispy_bootstrap5',
 
     'django.contrib.admin',
