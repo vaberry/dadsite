@@ -3,12 +3,7 @@ from .forms import NewUserForm
 from django.contrib.auth import login, authenticate, logout
 from django.contrib import messages
 from django.contrib.auth.forms import AuthenticationForm
-
 from django.views.generic.base import View, TemplateView
-
-# Create your views here.
-class Home(TemplateView):
-    template_name='home.html'
 
 def register_request(request):
 	if request.method == "POST":
@@ -40,8 +35,11 @@ def login_request(request):
 	form = AuthenticationForm()
 	return render(request=request, template_name="login.html", context={"login_form":form})
 
-
 def logout_request(request):
 	logout(request)
 	messages.info(request, "You have successfully logged out.") 
 	return redirect("login")
+
+
+class Home(TemplateView):
+    template_name='home.html'
