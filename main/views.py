@@ -43,3 +43,6 @@ def logout_request(request):
 
 class Home(TemplateView):
     template_name='home.html'
+
+class Story(TemplateView):
+	template_name='story.html'
