@@ -58,4 +58,9 @@ class Story(View):
 					body = msg,
 				)
 
-		return render(request, 'story.html')
+				return redirect('story')
+		
+			context = {
+				'stories' : StoryModel.objects.all()
+			}
+			return render(request, 'story.html', context=context)

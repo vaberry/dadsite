@@ -9,6 +9,7 @@
 
         <div class="col-sm-5 col-md-6 col-12 pb-4" id="stories">
             <h1>Comments</h1>
+            
             <div class="comment mt-4 text-justify float-left">
                 <img src="https://i.imgur.com/yTFUilP.jpg" alt="" class="rounded-circle" width="40" height="40">
                 <h4>Jhon Doe</h4>
@@ -16,6 +17,15 @@
                 <br>
                 <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Accusamus numquam assumenda hic aliquam vero sequi velit molestias doloremque molestiae dicta?</p>
             </div>
+            {% for story in stories %}
+            <div class="comment mt-4 text-justify float-left">
+                <img style="margin-right: 5px;" src="https://i.imgur.com/yTFUilP.jpg" alt="" class="rounded-circle" width="35" height="35">
+                <h4>{{ story.name }}</h4>
+                <span> - {{ story.created_on }} </span>
+                <br>
+                <p>{{ story.body }}</p>
+            </div>
+            {% endfor %}
         </div>
 
         <div class="col-lg-4 col-md-5 col-sm-4 offset-md-1 offset-sm-1 col-12 mt-4">
@@ -25,6 +35,7 @@
                     <label for="message">Message</label>
                     <textarea name="msg" id=""msg cols="30" rows="5" class="form-control" style="background-color: black;"></textarea>
                 </div>
+                
                 <div class="form-group">
                     <label for="name">Name</label>
                     <input type="text" name="name" id="fullname" class="form-control">
