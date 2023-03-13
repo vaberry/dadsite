@@ -49,10 +49,11 @@ class Story(View):
 	def get(self, request):
 		if request.method == "GET":
 			if 'user_story' in request.GET:
-				print('get request')
-				name = request.GET.get("name")
+				if request.GET.get == '':
+					name = 'Friend of Vince'
+				else:
+					name = request.GET.get("name")
 				msg = request.GET.get("msg")
-				print('name', name, 'msg', msg)
 				StoryModel.objects.create(
 					name = name,
 					body = msg,
@@ -61,6 +62,6 @@ class Story(View):
 				return redirect('story')
 		
 			context = {
-				'stories' : StoryModel.objects.all()
+				'stories' : StoryModel.objects.all().order_by('-created_on')
 			}
 			return render(request, 'story.html', context=context)
