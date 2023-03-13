@@ -1,7 +1,7 @@
 from django.db import models
 
 # Create your models here.
-class Story(models.Model):
+class StoryModel(models.Model):
     name = models.CharField(max_length=80)
     body = models.TextField()
     created_on = models.DateTimeField(auto_now_add=True)

@@ -4,6 +4,7 @@ from django.contrib.auth import login, authenticate, logout
 from django.contrib import messages
 from django.contrib.auth.forms import AuthenticationForm
 from django.views.generic.base import View, TemplateView
+from .models import StoryModel
 
 def register_request(request):
 	if request.method == "POST":
@@ -44,5 +45,17 @@ def logout_request(request):
 class Home(TemplateView):
     template_name='home.html'
 
-class Story(TemplateView):
-	template_name='story.html'
+class Story(View):
+	def get(self, request):
+		if request.method == "GET":
+			if 'user_story' in request.GET:
+				print('get request')
+				name = request.GET.get("name")
+				msg = request.GET.get("msg")
+				print('name', name, 'msg', msg)
+				StoryModel.objects.create(
+					name = name,
+					body = msg,
+				)
+
+		return render(request, 'story.html')
