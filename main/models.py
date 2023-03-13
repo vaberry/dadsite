@@ -4,6 +4,7 @@ from django.db import models
 class StoryModel(models.Model):
     name = models.CharField(max_length=80)
     body = models.TextField()
+    relationship = models.CharField(max_length=80, null=True)
     created_on = models.DateTimeField(auto_now_add=True)
 
     class Meta:
