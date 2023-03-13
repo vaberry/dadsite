@@ -13,6 +13,12 @@
         width: 100%;
     }
 }
+
+#stories {
+    height: 90vh;
+    overflow-x: scroll;
+}
+
 #clicked{
     padding-top: 1px;
     padding-bottom: 1px;
