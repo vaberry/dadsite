@@ -1,0 +1,56 @@
+{% extends 'index.html' %}
+{% load static %}
+
+{% block content %}
+<link rel="stylesheet" href="{% static 'css/gallery.css' %}">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.js"></script>
+
+
+ <div class="container">
+    <div class="row">
+    <div class="col-lg-12 text-center my-2">
+        <h4>"I got a story for ya..."</h4>
+    </div>
+    </div>
+    <div class="portfolio-menu mt-2 mb-4">
+    <ul>
+        <li class="btn btn-outline-primary active" data-filter="*">All</li>
+        <li class="btn btn-outline-primary" data-filter=".gts">Family Man</li>
+        <li class="btn btn-outline-primary" data-filter=".lap">Athlete</li>
+        <li class="btn btn-outline-primary" data-filter=".selfie">Firefighter</li>
+    </ul>
+    </div>
+    <div class="portfolio-item row">
+        <div class="item selfie col-lg-3 col-md-4 col-6 col-sm">
+            <a href="https://image.freepik.com/free-photo/stylish-young-woman-with-bags-taking-selfie_23-2147962203.jpg" class="fancylight popup-btn" data-fancybox-group="light"> 
+            <img class="img-fluid" src="https://image.freepik.com/free-photo/stylish-young-woman-with-bags-taking-selfie_23-2147962203.jpg" alt="">
+            </a>
+        </div>
+        <div class="item gts col-lg-3 col-md-4 col-6 col-sm">
+            <a href="https://image.freepik.com/free-photo/pretty-girl-near-car_1157-16962.jpg" class="fancylight popup-btn" data-fancybox-group="light"> 
+            <img class="img-fluid" src="https://image.freepik.com/free-photo/pretty-girl-near-car_1157-16962.jpg" alt="">
+            </a>
+        </div>
+        <div class="item selfie col-lg-3 col-md-4 col-6 col-sm">
+            <a href="https://image.freepik.com/free-photo/blonde-tourist-taking-selfie_23-2147978899.jpg" class="fancylight popup-btn" data-fancybox-group="light">
+            <img class="img-fluid" src="https://image.freepik.com/free-photo/blonde-tourist-taking-selfie_23-2147978899.jpg" alt="">
+            </a>
+        </div>
+        <div class="item gts col-lg-3 col-md-4 col-6 col-sm">
+            <a href="https://image.freepik.com/free-photo/cute-girls-oin-studio_1157-18211.jpg" class="fancylight popup-btn" data-fancybox-group="light">
+            <img class="img-fluid" src="https://image.freepik.com/free-photo/cute-girls-oin-studio_1157-18211.jpg" alt="">
+            </a>
+        </div>
+        <div class="item gts col-lg-3 col-md-4 col-6 col-sm">
+            <a href="https://image.freepik.com/free-photo/stylish-pin-up-girls_1157-18451.jpg" class="fancylight popup-btn" data-fancybox-group="light">
+            <img class="img-fluid" src="https://image.freepik.com/free-photo/stylish-pin-up-girls_1157-18451.jpg" alt="">
+            </a>
+        </div>
+    </div>
+</div>
+      
+
+<script src="{% static 'js/gallery.js' %}"></script>
+
+
+{% endblock content %}

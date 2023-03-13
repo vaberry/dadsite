@@ -45,14 +45,16 @@ def logout_request(request):
 class Home(TemplateView):
     template_name='home.html'
 
+class Gallery(TemplateView):
+	template_name='gallery.html'
+	
 class Story(View):
 	def get(self, request):
 		if request.method == "GET":
 			if 'user_story' in request.GET:
-				if request.GET.get == '':
+				name = request.GET.get("name")
+				if name == '':
 					name = 'Friend of Vince'
-				else:
-					name = request.GET.get("name")
 				msg = request.GET.get("msg")
 				StoryModel.objects.create(
 					name = name,
