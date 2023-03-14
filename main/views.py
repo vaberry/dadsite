@@ -5,6 +5,7 @@ from django.contrib import messages
 from django.contrib.auth.forms import AuthenticationForm
 from django.views.generic.base import View, TemplateView
 from .models import StoryModel
+import os
 
 def register_request(request):
 	if request.method == "POST":
@@ -45,8 +46,21 @@ def logout_request(request):
 class Home(TemplateView):
     template_name='home.html'
 
-class Gallery(TemplateView):
-	template_name='gallery.html'
+class Gallery(View):
+	def get(self, request):
+		print('REQUEST IS GETTTT')
+		if request.method == "GET":
+			family_images_list = os.listdir('/home/vberry/django-projects/dadsite/dadsite/main/static/img/family_man')
+			athlete_images_list = os.listdir('/home/vberry/django-projects/dadsite/dadsite/main/static/img/athlete')
+			badass_images_list = os.listdir('/home/vberry/django-projects/dadsite/dadsite/main/static/img/badass')
+
+	
+			context = {
+				'family' : family_images_list,
+				'athlete' : athlete_images_list,
+				'badass' : badass_images_list,
+			}
+			return render(request, 'gallery.html', context=context)
 	
 class Story(View):
 	def get(self, request):
