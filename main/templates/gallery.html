@@ -7,6 +7,7 @@
 
 
  <div class="container">
+
     <div class="row">
     <div class="col-lg-12 text-center my-2">
         <h4>"I got a story for ya..."</h4>
@@ -21,175 +22,31 @@
     </ul>
     </div>
     <div class="portfolio-item row">
-        <!-- FAMILY MAN -->
-        <div class="item fam col-lg-3 col-md-4 col-6 col-sm">
-            <a href="{% static 'img/family_man/6001.jpeg' %}" class="fancylight popup-btn" data-fancybox-group="light"> 
-            <img class="img-fluid" src="{% static 'img/family_man/6001.jpeg' %}" alt="">
-            </a>
-        </div>  
-        <div class="item fam col-lg-3 col-md-4 col-6 col-sm">
-            <a href="{% static 'img/family_man/5906.jpeg' %}" class="fancylight popup-btn" data-fancybox-group="light"> 
-            <img class="img-fluid" src="{% static 'img/family_man/5906.jpeg' %}" alt="">
-            </a>
-        </div>        
-        <div class="item fam col-lg-3 col-md-4 col-6 col-sm">
-            <a href="{% static 'img/family_man/IMG_0002.jpg' %}" class="fancylight popup-btn" data-fancybox-group="light"> 
-            <img class="img-fluid" src="{% static 'img/family_man/IMG_0002.jpg' %}" alt="">
-            </a>
-        </div>
-        <div class="item fam col-lg-3 col-md-4 col-6 col-sm">
-            <a href="{% static 'img/family_man/IMG_0094.jpg' %}" class="fancylight popup-btn" data-fancybox-group="light"> 
-            <img class="img-fluid" src="{% static 'img/family_man/IMG_0094.jpg' %}" alt="">
-            </a>
-        </div>
-        <div class="item fam col-lg-3 col-md-4 col-6 col-sm">
-            <a href="{% static 'img/family_man/IMG_0138.jpg' %" class="fancylight popup-btn" data-fancybox-group="light"> 
-            <img class="img-fluid" src="{% static 'img/family_man/IMG_0138.jpg' %}" alt="">
-            </a>
-        </div>
-        <div class="item fam col-lg-3 col-md-4 col-6 col-sm">
-            <a href="{% static 'img/family_man/IMG_0424.jpg' %}" class="fancylight popup-btn" data-fancybox-group="light"> 
-            <img class="img-fluid" src="{% static 'img/family_man/IMG_0424.jpg' %}" alt="">
-            </a>
-        </div>
-        <div class="item fam col-lg-3 col-md-4 col-6 col-sm">
-            <a href="{% static 'img/family_man/IMG_0430.jpg' %}" class="fancylight popup-btn" data-fancybox-group="light"> 
-            <img class="img-fluid" src="{% static 'img/family_man/IMG_0430.jpg' %}" alt="">
-            </a>
-        </div>
-        <div class="item fam col-lg-3 col-md-4 col-6 col-sm">
-            <a href="{% static 'img/family_man/IMG_0733.jpg' %}" class="fancylight popup-btn" data-fancybox-group="light"> 
-            <img class="img-fluid" src="{% static 'img/family_man/IMG_0733.jpg' %}" alt="">
-            </a>
-        </div>
-        <div class="item fam col-lg-3 col-md-4 col-6 col-sm">
-            <a href="{% static 'img/family_man/IMG_1874.jpg' %}" class="fancylight popup-btn" data-fancybox-group="light"> 
-            <img class="img-fluid" src="{% static 'img/family_man/IMG_1874.jpg' %}" alt="">
-            </a>
-        </div>
-        <div class="item fam col-lg-3 col-md-4 col-6 col-sm">
-            <a href="{% static 'img/family_man/IMG_3398.jpg' %}" class="fancylight popup-btn" data-fancybox-group="light"> 
-            <img class="img-fluid" src="{% static 'img/family_man/IMG_3398.jpg' %}" alt="">
-            </a>
-        </div>
-        <div class="item fam col-lg-3 col-md-4 col-6 col-sm">
-            <a href="{% static 'img/family_man/IMG_3409.jpg' %}" class="fancylight popup-btn" data-fancybox-group="light"> 
-            <img class="img-fluid" src="{% static 'img/family_man/IMG_3409.jpg' %}" alt="">
-            </a>
-        </div>
-        <!-- END FAMILY MAN -->
 
-        <!-- ATHLETE -->
-        <div class="item athlete col-lg-3 col-md-4 col-6 col-sm">
-            <a href="{% static 'img/athlete/5904.jpeg' %}" class="fancylight popup-btn" data-fancybox-group="light"> 
-            <img class="img-fluid" src="{% static 'img/athlete/5904.jpeg' %}" alt="">
+        {% for image in family %}
+        <div class="item fam col-lg-3 col-md-4 col-6 col-sm">
+            <a href="{% static 'img/family_man/' %}{{ image }}" class="fancylight popup-btn" data-fancybox-group="light"> 
+            <img class="img-fluid" src="{% static 'img/family_man/' %}{{ image }}" alt="">
             </a>
         </div>
-        <div class="item athlete col-lg-3 col-md-4 col-6 col-sm">
-            <a href="{% static 'img/athlete/5989.jpeg' %}" class="fancylight popup-btn" data-fancybox-group="light"> 
-            <img class="img-fluid" src="{% static 'img/athlete/5989.jpeg' %}" alt="">
-            </a>
-        </div>
-        <div class="item athlete col-lg-3 col-md-4 col-6 col-sm">
-            <a href="{% static 'img/athlete/5990.jpeg' %}" class="fancylight popup-btn" data-fancybox-group="light"> 
-            <img class="img-fluid" src="{% static 'img/athlete/5990.jpeg' %}" alt="">
-            </a>
-        </div>
-        <div class="item athlete col-lg-3 col-md-4 col-6 col-sm">
-            <a href="{% static 'img/IMG_0252.jpg' %}" class="fancylight popup-btn" data-fancybox-group="light"> 
-            <img class="img-fluid" src="{% static 'img/athlete/IMG_0252.jpg' %}" alt="">
-            </a>
-        </div>
-        <div class="item athlete col-lg-3 col-md-4 col-6 col-sm">
-            <a href="{% static 'img//athlete/IMG_0567.jpg' %}" class="fancylight popup-btn" data-fancybox-group="light"> 
-            <img class="img-fluid" src="{% static 'img/athlete/IMG_0567.jpg' %}" alt="">
-            </a>
-        </div>
-        <div class="item athlete col-lg-3 col-md-4 col-6 col-sm">
-            <a href="{% static 'img/athlete/IMG_0601.jpg' %}" class="fancylight popup-btn" data-fancybox-group="light"> 
-            <img class="img-fluid" src="{% static 'img/athlete/IMG_0601.jpg' %}" alt="">
-            </a>
-        </div>
-        <div class="item athlete col-lg-3 col-md-4 col-6 col-sm">
-            <a href="{% static 'img/athlete/IMG_0652.jpg' %}" class="fancylight popup-btn" data-fancybox-group="light"> 
-            <img class="img-fluid" src="{% static 'img/athlete/IMG_0652.jpg' %}" alt="">
-            </a>
-        </div>
-        <div class="item athlete col-lg-3 col-md-4 col-6 col-sm">
-            <a href="{% static 'img/athlete/IMG_0709.jpg' %}" class="fancylight popup-btn" data-fancybox-group="light"> 
-            <img class="img-fluid" src="{% static 'img/athlete/IMG_0709.jpg' %}" alt="">
-            </a>
-        </div>
-        <div class="item athlete col-lg-3 col-md-4 col-6 col-sm">
-            <a href="{% static 'img/athlete/IMG_0713.jpg' %}" class="fancylight popup-btn" data-fancybox-group="light"> 
-            <img class="img-fluid" src="{% static 'img/athlete/IMG_0713.jpg' %}" alt="">
-            </a>
-        </div>
-        <div class="item athlete col-lg-3 col-md-4 col-6 col-sm">
-            <a href="{% static 'img/athlete/IMG_0763.jpg' %}" class="fancylight popup-btn" data-fancybox-group="light"> 
-            <img class="img-fluid" src="{% static 'img/athlete/IMG_0763.jpg' %}" alt="">
-            </a>
-        </div>
-        <div class="item athlete col-lg-3 col-md-4 col-6 col-sm">
-            <a href="{% static 'img/athlete/IMG_2103.jpg' %}" class="fancylight popup-btn" data-fancybox-group="light"> 
-            <img class="img-fluid" src="{% static 'img/athlete/IMG_2103.jpg' %}" alt="">
-            </a>
-        </div>
-        <div class="item athlete col-lg-3 col-md-4 col-6 col-sm">
-            <a href="{% static 'img/athlete/IMG_2106.jpg' %}" class="fancylight popup-btn" data-fancybox-group="light"> 
-            <img class="img-fluid" src="{% static 'img/athlete/IMG_2106.jpg' %}" alt="">
-            </a>
-        </div>
-        <!-- END ATHLETE -->
+        {% endfor %}
 
-        <!-- BADASS -->
-        <div class="item badass col-lg-3 col-md-4 col-6 col-sm">
-            <a href="{% static 'img/badass/bad_ass.jpg' %}" class="fancylight popup-btn" data-fancybox-group="light"> 
-            <img class="img-fluid" src="{% static 'img/badass/bad_ass.jpg' %}" alt="">
+        {% for image in athlete %}
+        <div class="item athlete col-lg-3 col-md-4 col-6 col-sm">
+            <a href="{% static 'img/athlete/' %}{{ image }}" class="fancylight popup-btn" data-fancybox-group="light"> 
+            <img class="img-fluid" src="{% static 'img/athlete/' %}{{ image }}" alt="">
             </a>
         </div>
-        <div class="item badass col-lg-3 col-md-4 col-6 col-sm">
-            <a href="{% static 'img/badass/5916.jpeg' %}" class="fancylight popup-btn" data-fancybox-group="light"> 
-            <img class="img-fluid" src="{% static 'img/badass/profile.png' %}" alt="">
-            </a>
-        </div>
-        <div class="item badass col-lg-3 col-md-4 col-6 col-sm">
-            <a href="{% static 'img/badass/5903.jpeg' %}" class="fancylight popup-btn" data-fancybox-group="light"> 
-            <img class="img-fluid" src="{% static 'img/badass/5903.jpeg' %}" alt="">
-            </a>
-        </div>
-        <div class="item badass col-lg-3 col-md-4 col-6 col-sm">
-            <a href="{% static 'img/badass/5905.jpeg' %}" class="fancylight popup-btn" data-fancybox-group="light"> 
-            <img class="img-fluid" src="{% static 'img/badass/5905.jpeg' %}" alt="">
-            </a>
-        </div>
-        <div class="item badass col-lg-3 col-md-4 col-6 col-sm">
-            <a href="{% static 'img/badass/5910.jpeg' %}" class="fancylight popup-btn" data-fancybox-group="light"> 
-            <img class="img-fluid" src="{% static 'img/badass/5910.jpeg' %}" alt="">
-            </a>
-        </div>
-        <div class="item badass col-lg-3 col-md-4 col-6 col-sm">
-            <a href="{% static 'img/badass/5912.jpeg' %}" class="fancylight popup-btn" data-fancybox-group="light"> 
-            <img class="img-fluid" src="{% static 'img/badass/5912.jpeg' %}" alt="">
-            </a>
-        </div>
-        <div class="item badass col-lg-3 col-md-4 col-6 col-sm">
-            <a href="{% static 'img/badass/5913.jpeg' %}" class="fancylight popup-btn" data-fancybox-group="light"> 
-            <img class="img-fluid" src="{% static 'img/badass/5913.jpeg' %}" alt="">
-            </a>
-        </div>
-        <div class="item badass col-lg-3 col-md-4 col-6 col-sm">
-            <a href="{% static 'img/badass/5916.jpeg' %}" class="fancylight popup-btn" data-fancybox-group="light"> 
-            <img class="img-fluid" src="{% static 'img/badass/5916.jpeg' %}" alt="">
-            </a>
-        </div>
-        <div class="item badass col-lg-3 col-md-4 col-6 col-sm">
-            <a href="{% static 'img/badass/5916.jpeg' %}" class="fancylight popup-btn" data-fancybox-group="light"> 
-            <img class="img-fluid" src="{% static 'img/badass/IMG_0126_1.jpg' %}" alt="">
-            </a>
-        </div>
+        {% endfor %}
 
-        <!-- END BADASS -->
+        {% for image in badass %}
+        <div class="item badass col-lg-3 col-md-4 col-6 col-sm">
+            <a href="{% static 'img/badass/' %}{{ image }}" class="fancylight popup-btn" data-fancybox-group="light"> 
+            <img class="img-fluid" src="{% static 'img/badass/' %}{{ image }}" alt="">
+            </a>
+        </div>
+        {% endfor %}
+
     </div>
 </div>
       
