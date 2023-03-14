@@ -67,3 +67,6 @@ class Story(View):
 				'stories' : StoryModel.objects.all().order_by('-created_on')
 			}
 			return render(request, 'story.html', context=context)
+
+class Arrangements(TemplateView):
+	template_name='arrangements.html'
