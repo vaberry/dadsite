@@ -1,29 +1,29 @@
 {% load static %}
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <div class="container-fluid">
-        <div style="display: flex; flex-direction: column;">
-            <img class="rounded-circle" src="{% static 'img/badass/5905.jpeg' %}" alt="" style="height: 50px; width: 50px; margin-right: 15px;">
-            <!-- <a class="navbar-brand" href="#">Vince Berry</a>     -->
+        <div style="display: flex; flex-direction: column; text-align: center;">
+            <img class="rounded-circle" src="{% static 'img/badass/5905.jpeg' %}" alt="" style="height: 50px; width: 50px; margin-right: 15px; align-self: center;">
+            <a class="navbar-brand" href="#">Vince Berry</a>    
         </div>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                <li class="nav-item">
-                    <a class="nav-link" aria-current="page" href="{% url 'home' %}">Dedication |</a>
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0 text-center">
+                <li class="nav-item mx-4">
+                    <a class="nav-link" aria-current="page" href="{% url 'home' %}">Dedication</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" aria-current="page" href="{% url 'gallery' %}">Gallery |</a>
+                <li class="nav-item mx-4">
+                    <a class="nav-link" aria-current="page" href="{% url 'gallery' %}">Gallery</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" aria-current="page" href="{% url 'story' %}">Stories, Memories & Thoughts |</a>
+                <li class="nav-item mx-4">
+                    <a class="nav-link" aria-current="page" href="{% url 'story' %}">Stories, Memories & Thoughts</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="{% url 'arrangements' %}">Arrangements |</a>
+                <li class="nav-item mx-4">
+                    <a class="nav-link" href="{% url 'arrangements' %}">Arrangements</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="{% url 'obituary' %}">Obituary |</a>
+                <li class="nav-item mx-4">
+                    <a class="nav-link" href="{% url 'obituary' %}">Obituary</a>
                 </li>
             </ul>
         </div>
