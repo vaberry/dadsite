@@ -88,3 +88,6 @@ class Story(View):
 
 class Arrangements(TemplateView):
 	template_name='arrangements.html'
+
+class Obituary(TemplateView):
+	template_name='obituary.html'
