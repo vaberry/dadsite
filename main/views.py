@@ -50,17 +50,18 @@ class Gallery(View):
 	def get(self, request):
 		print('REQUEST IS GETTTT')
 		if request.method == "GET":
-			family_images_list = os.listdir('/home/vberry/django-projects/dadsite/dadsite/main/static/img/family_man')
-			athlete_images_list = os.listdir('/home/vberry/django-projects/dadsite/dadsite/main/static/img/athlete')
-			badass_images_list = os.listdir('/home/vberry/django-projects/dadsite/dadsite/main/static/img/badass')
+			# family_images_list = os.listdir('/home/vberry/django-projects/dadsite/dadsite/main/static/img/family_man')
+			# athlete_images_list = os.listdir('/home/vberry/django-projects/dadsite/dadsite/main/static/img/athlete')
+			# badass_images_list = os.listdir('/home/vberry/django-projects/dadsite/dadsite/main/static/img/badass')
 
 	
-			context = {
-				'family' : family_images_list,
-				'athlete' : athlete_images_list,
-				'badass' : badass_images_list,
-			}
-			return render(request, 'gallery.html', context=context)
+			# context = {
+			# 	'images' : 
+			# 	'family' : family_images_list,
+			# 	'athlete' : athlete_images_list,
+			# 	'badass' : badass_images_list,
+			# }
+			return render(request, 'gallery.html')
 	
 class Story(View):
 	def get(self, request):
