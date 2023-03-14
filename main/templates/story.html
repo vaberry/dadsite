@@ -9,13 +9,11 @@
         <div class="col-sm-5 col-md-6 col-12 pb-4" id="stories">
             <h1 class="mt-2">Stories, Comments & Thoughts</h1>
             {% for story in stories %}
-            <div class="comment mt-4 text-justify float-left">
-                <!-- <img style="margin-right: 5px;" src="https://i.imgur.com/yTFUilP.jpg" alt="" class="rounded-circle" width="35" height="35"> -->
+            <div class="comment mt-4 col-md-8 text-justify float-left">
                 <br>
                 <h4>{{ story.name }}</h4>
                 <br>
-                <span><u>{{ story.created_on }}</u></span>                <!-- <br> -->
-                <!-- <hr color="white"> -->
+                <span><u>{{ story.created_on }}</u></span>
                 <p>{{ story.body }}</p>
             </div>
             {% endfor %}
