@@ -56,9 +56,12 @@ class Story(View):
 				if name == '':
 					name = 'Friend of Vince'
 				msg = request.GET.get("msg")
+				relationship = request.GET.get("relationship")
+
 				StoryModel.objects.create(
 					name = name,
 					body = msg,
+					relationship = relationship,
 				)
 
 				return redirect('story')

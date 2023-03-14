@@ -34,9 +34,10 @@
             <div class="comment mt-4 col-md-8 text-justify float-left">
                 <br>
                 <h4>{{ story.name }}</h4>
-                <br>
+                <p style="color: lightgray;">{% if story.relationship %} ({{ story.relationship }}) {% endif %}</p>
+                
                 <span><u>{{ story.created_on }}</u></span>
-                <p>{{ story.body }}</p>
+                <p style="color: white;">{{ story.body }}</p>
             </div>
             {% endfor %}
         </div>
