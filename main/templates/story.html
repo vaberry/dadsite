@@ -6,19 +6,6 @@
 <div class="container">
     <div class="row">
         
-        <div class="col-sm-5 col-md-6 col-12 pb-4" id="stories">
-            <h1 class="mt-2">Stories, Comments & Thoughts</h1>
-            {% for story in stories %}
-            <div class="comment mt-4 col-md-8 text-justify float-left">
-                <br>
-                <h4>{{ story.name }}</h4>
-                <br>
-                <span><u>{{ story.created_on }}</u></span>
-                <p>{{ story.body }}</p>
-            </div>
-            {% endfor %}
-        </div>
-
         <div class="col-lg-4 col-md-5 col-sm-4 offset-md-1 offset-sm-1 col-12 mt-4">
             <form id="algin-form">
                 <div class="form-group">
@@ -40,6 +27,41 @@
                 </div>
             </form>
         </div>
+        
+        <div class="col-sm-5 col-md-6 col-12 pb-4" id="stories">
+            <h1 class="mt-2">Stories, Comments & Thoughts</h1>
+            {% for story in stories %}
+            <div class="comment mt-4 col-md-8 text-justify float-left">
+                <br>
+                <h4>{{ story.name }}</h4>
+                <br>
+                <span><u>{{ story.created_on }}</u></span>
+                <p>{{ story.body }}</p>
+            </div>
+            {% endfor %}
+        </div>
+
+        <!-- <div class="col-lg-4 col-md-5 col-sm-4 offset-md-1 offset-sm-1 col-12 mt-4">
+            <form id="algin-form">
+                <div class="form-group">
+                    <h4>Leave a story</h4>
+                    <label for="message">Message</label>
+                    <textarea name="msg" id=""msg cols="30" rows="5" class="form-control"></textarea>
+                </div>
+                
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" name="name" id="fullname" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label for="name">Relationship</label>
+                    <input type="text" name="relationship" id="fullname" class="form-control">
+                </div>
+                <div class="form-group">
+                    <button type="submit" id="post" class="btn" name="user_story">Post Story</button>
+                </div>
+            </form>
+        </div> -->
 
 
     </div>
