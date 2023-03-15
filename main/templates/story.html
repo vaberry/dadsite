@@ -1,5 +1,6 @@
 {% extends 'index.html' %}
 {% load static %}
+{% load tz %}
 
 {% block content %}
 <link rel="stylesheet" href="{% static 'css/story.css' %}">
@@ -38,7 +39,7 @@
                 <h4>{{ story.name }}</h4>
                 <p style="color: lightgray;">{% if story.relationship %} ({{ story.relationship }}) {% endif %}</p>
                 
-                <span><u>{{ story.created_on }}</u></span>
+                <span>{{ story.created_on|timezone:"America/New_York" }}</span>
                 <p style="color: white;">{{ story.body }}</p>
             </div>
             {% endfor %}

@@ -6,6 +6,9 @@ from django.contrib.auth.forms import AuthenticationForm
 from django.views.generic.base import View, TemplateView
 from .models import StoryModel
 import os
+from django.utils import timezone
+import datetime
+
 
 def register_request(request):
 	if request.method == "POST":
@@ -48,13 +51,10 @@ class Home(TemplateView):
 
 class Gallery(View):
 	def get(self, request):
-		print('REQUEST IS GETTTT')
 		if request.method == "GET":
 			family_images_list = os.listdir('main/static/img/family_man')
 			athlete_images_list = os.listdir('main/static/img/athlete')
 			badass_images_list = os.listdir('main/static/img/badass')
-
-			print(family_images_list)
 	
 			context = {
 				'family' : family_images_list,
@@ -67,7 +67,9 @@ class Story(View):
 	def get(self, request):
 		if request.method == "GET":
 			if 'user_story' in request.GET:
+				# now = datetime.datetime.now()
 				name = request.GET.get("name")
+
 				if name == '':
 					name = 'Friend of Vince'
 				msg = request.GET.get("msg")
@@ -77,6 +79,7 @@ class Story(View):
 					name = name,
 					body = msg,
 					relationship = relationship,
+					# created_on = now,
 				)
 
 				return redirect('story')
