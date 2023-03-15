@@ -37,8 +37,7 @@
             <div class="comment mt-4 col-md-8 text-justify float-left">
                 <br>
                 <h4>{{ story.name }}</h4>
-                <p style="color: lightgray;">{% if story.relationship %} ({{ story.relationship }}) {% endif %}</p>
-                
+                <p style="color: lightgray;">{% if story.relationship %} ({{ story.relationship }}) {% endif %}</p>                
                 <span>{{ story.created_on|timezone:"America/New_York" }}</span>
                 <p style="color: white;">{{ story.body }}</p>
             </div>
