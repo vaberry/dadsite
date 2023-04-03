@@ -59,27 +59,6 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'dadsite.wsgi.application'
 
-# if DEVELOPMENT_MODE is True:
-#     print('connecting to development DB')
-#     DATABASES = {
-#         "default": {
-#             "ENGINE": "django.db.backends.sqlite3",
-#             "NAME": os.path.join(BASE_DIR, "db.sqlite3"),
-#         }
-#     }
-# else:
-#     print('starting in production DB')
-#     DATABASES = {
-#         'default': {
-#             'ENGINE': 'django.db.backends.postgresql_psycopg2',
-#             'NAME': 'db',
-#             'USER': os.getenv("DB_USERNAME"),
-#             'PASSWORD': os.getenv("DB_PASSWORD"),
-#             'HOST': 'app-a873f790-b7d7-45fb-92c1-22176a025e02-do-user-13471408-0.b.db.ondigitalocean.com',
-#             'PORT': '25060',
-#         }
-#     }
-
 AUTH_PASSWORD_VALIDATORS = [
     {
         'NAME': 'django.contrib.auth.password_validation.UserAttributeSimilarityValidator',
